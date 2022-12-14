@@ -8,7 +8,7 @@ public class Chislo {
  public void setChislo(int chislo){
    if (chislo>=1 && chislo<=6){
        this.chislo = chislo;
-   }
+   }//JJJJJJJJJJJJJJJJJJJJJJJJ
  }
  
  public int getChislo(){
