@@ -28,6 +28,13 @@ public class SuzdaiProfil extends javax.swing.JFrame {
 
         pnlSuzdaiProfil = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        btnProfil = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 102, 153));
@@ -38,21 +45,70 @@ public class SuzdaiProfil extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 204, 0));
         jLabel1.setText("Създаване на профил");
 
+        btnProfil.setBackground(new java.awt.Color(255, 204, 0));
+        btnProfil.setText("Създай");
+        btnProfil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProfilActionPerformed(evt);
+            }
+        });
+
+        jTextField1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
+        jTextField2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jTextField3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jTextField4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Име и фамилия");
+
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Имейл");
+
         javax.swing.GroupLayout pnlSuzdaiProfilLayout = new javax.swing.GroupLayout(pnlSuzdaiProfil);
         pnlSuzdaiProfil.setLayout(pnlSuzdaiProfilLayout);
         pnlSuzdaiProfilLayout.setHorizontalGroup(
             pnlSuzdaiProfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlSuzdaiProfilLayout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(193, Short.MAX_VALUE))
+                .addGroup(pnlSuzdaiProfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnlSuzdaiProfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(btnProfil, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
+                        .addComponent(jTextField3)
+                        .addComponent(jTextField4)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(86, Short.MAX_VALUE))
         );
         pnlSuzdaiProfilLayout.setVerticalGroup(
             pnlSuzdaiProfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlSuzdaiProfilLayout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(262, Short.MAX_VALUE))
+                .addGap(9, 9, 9)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel3)
+                .addGap(4, 4, 4)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addComponent(btnProfil)
+                .addGap(20, 20, 20))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -68,6 +124,19 @@ public class SuzdaiProfil extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnProfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProfilActionPerformed
+        //ДА НЯМА ТАКЪВ СЪЩЕСТВУВАЩ USERNAME
+        //username password ime email
+        this.dispose();
+        new ProformaSportove().setVisible(true);
+        
+       
+    }//GEN-LAST:event_btnProfilActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -105,7 +174,14 @@ public class SuzdaiProfil extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnProfil;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
     private javax.swing.JPanel pnlSuzdaiProfil;
     // End of variables declaration//GEN-END:variables
 }
