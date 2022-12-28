@@ -4,6 +4,14 @@
  */
 package Proekt;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintStream;
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
+import java.util.Scanner;
+
 /**
  *
  * @author Виктория Стефанова
@@ -65,6 +73,11 @@ public class SuzdaiProfil extends javax.swing.JFrame {
         txtEmail.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         txtUsername.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        txtUsername.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUsernameActionPerformed(evt);
+            }
+        });
 
         txtPassword.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -147,21 +160,51 @@ public class SuzdaiProfil extends javax.swing.JFrame {
         String name = txtName.getText();
         String password = txtPassword.getText();
         String email = txtEmail.getText();
-        
+        /*try{
+       File f = new File("src//Proekt//danni.txt");
+        Scanner fileReader = new Scanner (f);
+        int lineNumber=0;
+    while (fileReader.hasNextLine()){
+        lineNumber++;
+    }
+    if(txtUsername.getText().equals())
+        }catch(FileNotFoundException ea){
+            System.out.println(ea);
+        }
+        */
+        File fe= new File("src//Proekt//danni.txt");
+    //String write() throws FileNotFoundException{
+        try{
+        PrintStream fileWriter = new PrintStream(fe);
+        String profil[]= new String[10];
+        for (int i = 0; i < profil.length; i++) {
+            fileWriter.println(txtUsername.getText() );
+            
+        }
+        }catch(FileNotFoundException aa){
+            System.out.println(aa);
+        }
+        if(txtUsername.getText())
         this.dispose();
         new ProformaSportove().setVisible(true);
         
-       
+      
     }//GEN-LAST:event_btnProfilActionPerformed
-
+    
+    
+        
     private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNameActionPerformed
 
+    private void txtUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUsernameActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String args[]) throws IOException {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -184,15 +227,27 @@ public class SuzdaiProfil extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(SuzdaiProfil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        try{
+File file= new File("src//Proekt//danni.txt");
 
+       boolean isCreated = file.createNewFile();
+       if(isCreated){
+           System.out.println("file has been created successfully");
+           
+       }else System.out.println("already present at the specified location");
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
+       /* java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new SuzdaiProfil().setVisible(true);
             }
-        });
-    }
-
+        });*/
+    }catch(IOException e){
+            System.out.println("Exception Occured");
+            e.printStackTrace();
+    } 
+        
+     
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnProfil;
     private javax.swing.JLabel jLabel1;
