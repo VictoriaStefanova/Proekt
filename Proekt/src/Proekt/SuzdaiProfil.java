@@ -150,7 +150,7 @@ public class SuzdaiProfil extends javax.swing.JFrame {
         String email = txtEmail.getText();
         
         this.dispose();
-        new ProformaSportove().setVisible(true);
+        new SportNaDenq().setVisible(true);
         
        
     }//GEN-LAST:event_btnProfilActionPerformed
