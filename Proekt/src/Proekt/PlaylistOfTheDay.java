@@ -4,12 +4,14 @@
  */
 package Proekt;
 
+import java.util.Random;
+
 /**
  *
  * @author Виктория Стефанова
  */
-public class PlaylistOfTheDay extends javax.swing.JFrame {
-
+public class PlaylistOfTheDay extends javax.swing.JFrame  {
+SportNaDenq child;
     /**
      * Creates new form PlaylistOfTheDay
      */
@@ -30,6 +32,11 @@ public class PlaylistOfTheDay extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         btnGeneriraiNovPlaylist = new javax.swing.JButton();
         btnIzhodOtProfil = new javax.swing.JButton();
+        txtSong1 = new javax.swing.JTextField();
+        txtSong2 = new javax.swing.JTextField();
+        txtSong3 = new javax.swing.JTextField();
+        txtSong4 = new javax.swing.JTextField();
+        txtSong5 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,6 +62,31 @@ public class PlaylistOfTheDay extends javax.swing.JFrame {
             }
         });
 
+        txtSong1.setBackground(new java.awt.Color(0, 102, 153));
+        txtSong1.setFont(new java.awt.Font("Harrington", 2, 14)); // NOI18N
+        txtSong1.setForeground(new java.awt.Color(255, 255, 255));
+        txtSong1.setBorder(null);
+
+        txtSong2.setBackground(new java.awt.Color(0, 102, 153));
+        txtSong2.setFont(new java.awt.Font("Harrington", 2, 14)); // NOI18N
+        txtSong2.setForeground(new java.awt.Color(255, 255, 255));
+        txtSong2.setBorder(null);
+
+        txtSong3.setBackground(new java.awt.Color(0, 102, 153));
+        txtSong3.setFont(new java.awt.Font("Harrington", 2, 14)); // NOI18N
+        txtSong3.setForeground(new java.awt.Color(255, 255, 255));
+        txtSong3.setBorder(null);
+
+        txtSong4.setBackground(new java.awt.Color(0, 102, 153));
+        txtSong4.setFont(new java.awt.Font("Harrington", 2, 14)); // NOI18N
+        txtSong4.setForeground(new java.awt.Color(255, 255, 255));
+        txtSong4.setBorder(null);
+
+        txtSong5.setBackground(new java.awt.Color(0, 102, 153));
+        txtSong5.setFont(new java.awt.Font("Harrington", 2, 14)); // NOI18N
+        txtSong5.setForeground(new java.awt.Color(255, 255, 255));
+        txtSong5.setBorder(null);
+
         javax.swing.GroupLayout pnlPlaylistOfTheDayLayout = new javax.swing.GroupLayout(pnlPlaylistOfTheDay);
         pnlPlaylistOfTheDay.setLayout(pnlPlaylistOfTheDayLayout);
         pnlPlaylistOfTheDayLayout.setHorizontalGroup(
@@ -62,20 +94,39 @@ public class PlaylistOfTheDay extends javax.swing.JFrame {
             .addGroup(pnlPlaylistOfTheDayLayout.createSequentialGroup()
                 .addGroup(pnlPlaylistOfTheDayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlPlaylistOfTheDayLayout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlPlaylistOfTheDayLayout.createSequentialGroup()
                         .addGap(34, 34, 34)
                         .addComponent(btnGeneriraiNovPlaylist, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(36, 36, 36)
-                        .addComponent(btnIzhodOtProfil, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnIzhodOtProfil, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlPlaylistOfTheDayLayout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addGroup(pnlPlaylistOfTheDayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(pnlPlaylistOfTheDayLayout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addGroup(pnlPlaylistOfTheDayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtSong1, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtSong2, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtSong3, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtSong4, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtSong5, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(46, Short.MAX_VALUE))
         );
         pnlPlaylistOfTheDayLayout.setVerticalGroup(
             pnlPlaylistOfTheDayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlPlaylistOfTheDayLayout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 403, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtSong1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtSong2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtSong3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtSong4, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtSong5, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 203, Short.MAX_VALUE)
                 .addGroup(pnlPlaylistOfTheDayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGeneriraiNovPlaylist, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnIzhodOtProfil))
@@ -111,6 +162,68 @@ public class PlaylistOfTheDay extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    
+    public void playlist (String m[],String n[]){
+      Random generator = new Random();  
+      int a,b=0;
+      int help [] = new int [5];
+        for (int i = 0; i < 5; i++) {
+         a=generator.nextInt(10);
+         
+            for (int j = 0; j < 5; j++) {
+            if (a==help[j]){
+              b++;  
+            }  
+            }
+            
+            if (b==0){
+          switch (a){
+              case 0:
+                help[i]=0;
+                n[i]=m[0];  
+                  break;
+              case 1:
+                help[i]=1;
+                n[i]=m[1]; 
+                  break;
+              case 2:
+                help[i]=2;
+                n[i]=m[2];  
+                  break;
+              case 3:
+                help[i]=3;
+                n[i]=m[3];  
+                  break;
+              case 4:
+                help[i]=4;
+                n[i]=m[4]; 
+                  break;
+              case 5:
+                help[i]=5;
+                n[i]=m[5];  
+                  break;
+              case 6:
+                help[i]=6;
+                n[i]=m[6];  
+                  break;
+              case 7:
+                help[i]=7;
+                n[i]=m[7];  
+                  break;
+              case 8:
+                help[i]=8;
+                n[i]=m[8];  
+                  break;
+              case 9:
+                help[i]=9;
+                n[i]=m[9];  
+                  break;   
+          }  
+            }
+          a=0;
+          b=0;
+        }
+    }
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -135,9 +248,63 @@ public class PlaylistOfTheDay extends javax.swing.JFrame {
         }
         //</editor-fold>
 
+        String latin [] = new String [10];
+        String ballroom [] = new String [10];
+        String hipHop [] = new String [10];
+        String spinning [] = new String [10];
+        String fitness [] = new String [10];
+        String track [] = new String [10];
+        String ballet [] = new String [10];
+        
+        latin[0] = "Vivir Mi Vida";
+        latin[1] = "Hips Don't Lie"; 
+        latin[2] = "Gasolina";
+        latin[3] = "Como La Flor";
+        latin[4] = "Lambada"; 
+        latin[5] = "Yo Perreo Sola"; 
+	latin[6] = "Mi Gente"; 
+	latin[7] = "Bailando";
+	latin[8] = "Ginza";
+	latin[9] = "Una Noche Más";
+        
+        ballroom [0] = "Ballroom Dancing";
+	ballroom [1] = "Thinking Out Loud";
+	ballroom [2] = "Shut Up and Dance";
+	ballroom [3] = "Just the Way You Are";
+	ballroom [4] = "Enjoy The Party (Ballroom Dance Music)";
+	ballroom [5] = "Cha Charanga";
+	ballroom [6] = "Sway";
+	ballroom [7] = "It Don't Mean a Thing (If It Ain't Got That Swing)";
+	ballroom [8] = "Time to Tango (Tango)";
+	ballroom [9] = "Another Day of Sun";
+
+        hipHop [0] = "Fight The Power";
+	hipHop [1] = "Mind Playing Tricks on Me";
+	hipHop [2] = "Lose Yourself";
+	hipHop [3] = "N.Y. State of Mind";
+	hipHop [4] = "The Message";
+	hipHop [5] = "Ice Cream";
+	hipHop [6] = "O.P.P.";
+	hipHop [7] = "Passing Me By";
+	hipHop [8] = "Children's Story";
+	hipHop [9] = "Tomorrow 2";
+        
+        spinning [0] = "Pump It";
+        spinning [1] = "Lose Control";
+        spinning [2] = "What A Life (Benny Benassi & BB Team Balkanic Remix)";
+        spinning [3] = "Breathe (feat. Ina Wroldsen)";
+        spinning [4] = "L.A. Traffic";
+        spinning [5] = "Better Off Without You";
+        spinning [6] = "Hate You (The Same)";
+        spinning [7] = "The Feeling";
+        spinning [8] = "I Gotta Feeling";
+        spinning [9] = "DANCE";
+
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                
                 new PlaylistOfTheDay().setVisible(true);
             }
         });
@@ -148,5 +315,10 @@ public class PlaylistOfTheDay extends javax.swing.JFrame {
     private javax.swing.JButton btnIzhodOtProfil;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel pnlPlaylistOfTheDay;
+    private javax.swing.JTextField txtSong1;
+    private javax.swing.JTextField txtSong2;
+    private javax.swing.JTextField txtSong3;
+    private javax.swing.JTextField txtSong4;
+    private javax.swing.JTextField txtSong5;
     // End of variables declaration//GEN-END:variables
 }

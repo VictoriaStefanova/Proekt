@@ -26,9 +26,12 @@ public class SportNaDenq extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
         pnlSportNaDenq = new javax.swing.JPanel();
         btnSuzdaiPlaylist = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        rbFitness = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 102, 153));
@@ -48,6 +51,12 @@ public class SportNaDenq extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 204, 0));
         jLabel1.setText("Изберете желаният от вас спорт");
 
+        rbFitness.setBackground(new java.awt.Color(0, 102, 153));
+        buttonGroup1.add(rbFitness);
+        rbFitness.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
+        rbFitness.setForeground(new java.awt.Color(255, 255, 255));
+        rbFitness.setText("Фитнес");
+
         javax.swing.GroupLayout pnlSportNaDenqLayout = new javax.swing.GroupLayout(pnlSportNaDenq);
         pnlSportNaDenq.setLayout(pnlSportNaDenqLayout);
         pnlSportNaDenqLayout.setHorizontalGroup(
@@ -59,7 +68,11 @@ public class SportNaDenq extends javax.swing.JFrame {
                         .addComponent(btnSuzdaiPlaylist, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(pnlSportNaDenqLayout.createSequentialGroup()
                         .addGap(38, 38, 38)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(pnlSportNaDenqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(pnlSportNaDenqLayout.createSequentialGroup()
+                                .addComponent(rbFitness, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(66, 66, 66)))))
                 .addContainerGap(43, Short.MAX_VALUE))
         );
         pnlSportNaDenqLayout.setVerticalGroup(
@@ -67,7 +80,9 @@ public class SportNaDenq extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSportNaDenqLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 199, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(rbFitness)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 154, Short.MAX_VALUE)
                 .addComponent(btnSuzdaiPlaylist, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31))
         );
@@ -128,7 +143,10 @@ public class SportNaDenq extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSuzdaiPlaylist;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel pnlSportNaDenq;
+    private javax.swing.JRadioButton rbFitness;
     // End of variables declaration//GEN-END:variables
 }
