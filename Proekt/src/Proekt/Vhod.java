@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Proekt;
-//GRGSTYJN
+
 /**
  *
  * @author Виктория Стефанова
@@ -32,8 +32,8 @@ public class Vhod extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnVhod = new javax.swing.JButton();
+        btnSuzdaiProfil = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,19 +55,19 @@ public class Vhod extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Password");
 
-        jButton1.setBackground(new java.awt.Color(255, 204, 0));
-        jButton1.setText("Вход");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnVhod.setBackground(new java.awt.Color(255, 204, 0));
+        btnVhod.setText("Вход");
+        btnVhod.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnVhodActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(255, 204, 0));
-        jButton2.setText("Създай профил");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnSuzdaiProfil.setBackground(new java.awt.Color(255, 204, 0));
+        btnSuzdaiProfil.setText("Създай профил");
+        btnSuzdaiProfil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnSuzdaiProfilActionPerformed(evt);
             }
         });
 
@@ -88,8 +88,8 @@ public class Vhod extends javax.swing.JFrame {
                     .addGroup(pnlVhodLayout.createSequentialGroup()
                         .addGap(126, 126, 126)
                         .addGroup(pnlVhodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE))))
+                            .addComponent(btnVhod, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnSuzdaiProfil, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlVhodLayout.createSequentialGroup()
                 .addGap(0, 77, Short.MAX_VALUE)
@@ -110,9 +110,9 @@ public class Vhod extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23)
-                .addComponent(jButton1)
+                .addComponent(btnVhod)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2)
+                .addComponent(btnSuzdaiProfil)
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
@@ -130,14 +130,17 @@ public class Vhod extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btnVhodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVhodActionPerformed
+      String username = txtUsername.getText();
+      String password = txtPassword.getText();
+        this.dispose();
+        new SportNaDenq().setVisible(true);
+    }//GEN-LAST:event_btnVhodActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnSuzdaiProfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuzdaiProfilActionPerformed
         this.dispose();
         new SuzdaiProfil().setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnSuzdaiProfilActionPerformed
 
     /**
      * @param args the command line arguments
@@ -176,8 +179,8 @@ public class Vhod extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnSuzdaiProfil;
+    private javax.swing.JButton btnVhod;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
