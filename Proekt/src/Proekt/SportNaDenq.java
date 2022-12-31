@@ -27,11 +27,16 @@ public class SportNaDenq extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        buttonGroup2 = new javax.swing.ButtonGroup();
         pnlSportNaDenq = new javax.swing.JPanel();
         btnSuzdaiPlaylist = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         rbFitness = new javax.swing.JRadioButton();
+        rbBallet = new javax.swing.JRadioButton();
+        rbHiphop = new javax.swing.JRadioButton();
+        rbBallroom = new javax.swing.JRadioButton();
+        rbTrack = new javax.swing.JRadioButton();
+        rbLatin = new javax.swing.JRadioButton();
+        rbSpinning = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 102, 153));
@@ -51,11 +56,26 @@ public class SportNaDenq extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 204, 0));
         jLabel1.setText("Изберете желаният от вас спорт");
 
-        rbFitness.setBackground(new java.awt.Color(0, 102, 153));
         buttonGroup1.add(rbFitness);
-        rbFitness.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
-        rbFitness.setForeground(new java.awt.Color(255, 255, 255));
-        rbFitness.setText("Фитнес");
+        rbFitness.setText("Fitness");
+
+        buttonGroup1.add(rbBallet);
+        rbBallet.setText("Ballet");
+
+        buttonGroup1.add(rbHiphop);
+        rbHiphop.setText("Hip-Hop");
+
+        buttonGroup1.add(rbBallroom);
+        rbBallroom.setText("Ballroom dance");
+
+        buttonGroup1.add(rbTrack);
+        rbTrack.setText("Track");
+
+        buttonGroup1.add(rbLatin);
+        rbLatin.setText("Latin dance");
+
+        buttonGroup1.add(rbSpinning);
+        rbSpinning.setText("Spinning");
 
         javax.swing.GroupLayout pnlSportNaDenqLayout = new javax.swing.GroupLayout(pnlSportNaDenq);
         pnlSportNaDenq.setLayout(pnlSportNaDenqLayout);
@@ -68,11 +88,23 @@ public class SportNaDenq extends javax.swing.JFrame {
                         .addComponent(btnSuzdaiPlaylist, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(pnlSportNaDenqLayout.createSequentialGroup()
                         .addGap(38, 38, 38)
-                        .addGroup(pnlSportNaDenqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(pnlSportNaDenqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(pnlSportNaDenqLayout.createSequentialGroup()
-                                .addComponent(rbFitness, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(66, 66, 66)))))
+                                .addGroup(pnlSportNaDenqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(pnlSportNaDenqLayout.createSequentialGroup()
+                                        .addGap(19, 19, 19)
+                                        .addComponent(rbFitness, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(rbBallet, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(rbHiphop, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(69, 69, 69)
+                                .addGroup(pnlSportNaDenqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(rbSpinning, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(rbLatin, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(rbTrack, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(pnlSportNaDenqLayout.createSequentialGroup()
+                                .addGap(19, 19, 19)
+                                .addComponent(rbBallroom, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(43, Short.MAX_VALUE))
         );
         pnlSportNaDenqLayout.setVerticalGroup(
@@ -80,9 +112,21 @@ public class SportNaDenq extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSportNaDenqLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnlSportNaDenqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rbFitness)
+                    .addComponent(rbTrack))
                 .addGap(18, 18, 18)
-                .addComponent(rbFitness)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 154, Short.MAX_VALUE)
+                .addGroup(pnlSportNaDenqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rbBallet)
+                    .addComponent(rbLatin))
+                .addGap(18, 18, 18)
+                .addGroup(pnlSportNaDenqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rbHiphop)
+                    .addComponent(rbSpinning))
+                .addGap(18, 18, 18)
+                .addComponent(rbBallroom)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                 .addComponent(btnSuzdaiPlaylist, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31))
         );
@@ -95,7 +139,7 @@ public class SportNaDenq extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlSportNaDenq, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlSportNaDenq, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -144,9 +188,14 @@ public class SportNaDenq extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSuzdaiPlaylist;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel pnlSportNaDenq;
+    private javax.swing.JRadioButton rbBallet;
+    private javax.swing.JRadioButton rbBallroom;
     private javax.swing.JRadioButton rbFitness;
+    private javax.swing.JRadioButton rbHiphop;
+    private javax.swing.JRadioButton rbLatin;
+    private javax.swing.JRadioButton rbSpinning;
+    private javax.swing.JRadioButton rbTrack;
     // End of variables declaration//GEN-END:variables
 }
