@@ -12,11 +12,20 @@ import java.util.Random;
  */
 public class PlaylistOfTheDay extends javax.swing.JFrame  {
 SportNaDenq child;
+String sport;
     /**
      * Creates new form PlaylistOfTheDay
      */
     public PlaylistOfTheDay() {
         initComponents();
+    }
+    public PlaylistOfTheDay(String sport) {
+        
+        initComponents();
+        
+        this.sport=sport;
+        //System.out.println("sport:"+sport);
+        rabota();
     }
 
     /**
@@ -219,35 +228,14 @@ SportNaDenq child;
                 n[i]=m[9];  
                   break;   
           }  
-            }
+            }else i--;
           a=0;
           b=0;
         }
     }
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PlaylistOfTheDay.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PlaylistOfTheDay.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PlaylistOfTheDay.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PlaylistOfTheDay.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
+     
+    public void rabota(){
+        String pesni [] = new String [5];
         String latin [] = new String [10];
         String ballroom [] = new String [10];
         String hipHop [] = new String [10];
@@ -299,6 +287,71 @@ SportNaDenq child;
         spinning [7] = "The Feeling";
         spinning [8] = "I Gotta Feeling";
         spinning [9] = "DANCE";
+        System.out.println(sport + "spinning");
+        if (sport.equals("latin")){
+         playlist(latin,pesni);
+         pechatane(pesni);
+        }
+        if (sport.equals("spinning")){
+         playlist(spinning,pesni);
+         pechatane(pesni);
+            
+        }
+        if (sport.equals("hipHop")){
+         playlist(hipHop,pesni);
+         pechatane(pesni);
+        }
+        if (sport.equals("ballroom")){
+         playlist(ballroom,pesni);
+         pechatane(pesni);
+        }
+        if (sport.equals("fitness")){
+         playlist(fitness,pesni);
+         pechatane(pesni);
+        }
+        if (sport.equals("ballet")){
+         playlist(ballet,pesni);
+         pechatane(pesni);
+        }
+        if (sport.equals("track")){
+         playlist(track,pesni);
+         pechatane(pesni);
+        }
+    }
+    public void pechatane(String pesni[]){
+   
+        txtSong1.setText(pesni[0]);
+        txtSong2.setText(pesni[1]);
+        txtSong3.setText(pesni[2]);
+        txtSong4.setText(pesni[3]);
+        txtSong5.setText(pesni[4]);
+         
+    }
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(PlaylistOfTheDay.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(PlaylistOfTheDay.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(PlaylistOfTheDay.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(PlaylistOfTheDay.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+  
 
         
         /* Create and display the form */
